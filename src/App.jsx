@@ -9,7 +9,7 @@ import { useProductsQuery } from './services/ProductsApi';
 import HomeLoading from './Pages/HomeLoading';
 import { useState } from 'react';
 import Cookies from 'js-cookie';
-import LogIn from './Pages/Auth/Login';
+import LogIn from './Pages/Auth/LogIn';
 import SignUp from './Pages/Auth/SignUp';
 
 function App() {
