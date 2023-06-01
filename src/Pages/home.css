@@ -1,0 +1,5 @@
+.menuBlur{
+    background: rgba(103, 131, 148, 0.263) !important;
+    backdrop-filter: blur(5px) !important;
+    border-radius: 8px;
+}

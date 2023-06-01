@@ -1,0 +1,82 @@
+.mantine-19swgkw{
+    left:45%;
+    /* right: 45%; */
+    gap: 2rem !important;
+    cursor: pointer !important;
+    /* width: 170px !important ; */
+    width: 170px !important;
+    height: 50px !important;
+    background: rgba(37, 32, 32, 0.3) !important ;
+    backdrop-filter: blur(5px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 30px;
+}
+[type='button'], [type='reset'] {
+    /* -webkit-appearance: button; */
+    background-color: #CACFD1 !important ;
+    /* background-image: none; */
+    /* cursor: pointer !important; */
+    /* pointer-events: cursor; */
+}
+.slide1{
+    background: url('https://i.pinimg.com/originals/48/9e/6f/489e6f91ddcb277868b27f635a656b3a.png');
+    background-size: 100%;
+    background-position-y: -403px;
+    background-repeat: no-repeat;
+}
+.slide2{
+    background: url('https://i.pinimg.com/originals/48/9e/6f/489e6f91ddcb277868b27f635a656b3a.png');
+    background-size: 100%;
+    background-position-y: -403px;
+    background-repeat: no-repeat;
+
+}
+.slide3{
+    background: url('https://i.pinimg.com/originals/48/9e/6f/489e6f91ddcb277868b27f635a656b3a.png');
+    background-size: 100%;
+    background-position-y: -403px;
+    background-repeat: no-repeat;
+}
+.slideBlur{
+    background: rgba(117, 132, 142, .5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+
+}
+.mantine-1v3yzoy{
+    margin-top: -45px;
+    width: 40px !important;
+    height: 100px !important;
+    background: rgba(37, 32, 32, 0.3) !important;
+    opacity: 0.5 !important;
+    backdrop-filter: blur(10px) !important;
+
+    border-radius: 30px !important;
+    font-size: 30px;
+}
+.mantine-1v3yzoy svg{
+    width: 2rem !important;
+    height: 2rem !important;
+    /* drop-shadow: 2px 2px 2px #75848E; */
+}
+.mantine-1fuembl{
+    border: 2px solid #75848E !important;
+    background: #CACFD1 !important;
+}
+
+.mantine-1rpagaj{
+    border-bottom-right-radius:30px ;
+    border-bottom-left-radius:30px ;
+}
+.mantine-1rpagaj{
+    padding-right: 0rem;
+}
+.buttonBlur{
+    background: rgba(37, 32, 32, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 10px;
+}

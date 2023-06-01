@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
+#root {
+  margin: 0 ;
+  padding: 0rem;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*{
+  transition: .3s all;
+  scrollbar-width: none;
+  font-family: 'Maven Pro', sans-serif;
+  /* overflow-y: hidden; */
+}
+*::-webkit-scrollbar{
+  display: none;
+}
