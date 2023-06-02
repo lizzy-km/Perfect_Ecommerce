@@ -6,7 +6,7 @@ backdrop-filter: blur(10px);
 
 border-radius: 30px;
 }
-.mantine-4g8dsw,input{
+.mantine-4g8dsw{
     background-color: rgba(211, 219, 221, 0) !important ;
     /* backdrop-filter: blur(10px); */
     border-top-left-radius: 0 !important;

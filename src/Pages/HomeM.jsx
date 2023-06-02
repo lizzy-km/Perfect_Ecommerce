@@ -46,6 +46,11 @@ const HomeM = () => {
 
     const loading = data?.isLoading
 
+    useEffect(()=>{
+        // window.location.reload(true)
+
+    },[])
+
     if (loading===false) {
         return (
             <div className=' overflow-x-hidden   flex flex-col w-[100%] ' >

@@ -39,6 +39,7 @@ const LogIn = () => {
 
            if (data?.success) {
             nav('/')
+            window.location.reload(true)
 
             console.log('success');
                 <Home data={data} />

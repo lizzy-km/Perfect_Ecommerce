@@ -46,6 +46,7 @@ const Home = ({menu,showMenu,hideMenu}) => {
     const data = useProductsQuery()
     useEffect(()=>{
         dispatch(removeProducts(data?.data))
+        // window.location.reload(true)
     },[])
   const loading = data?.isLoading
     const Products = useSelector(state => state?.productsSlice?.Products)

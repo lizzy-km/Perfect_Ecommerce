@@ -7,10 +7,11 @@ import NavBarM from './Common/NavBarM';
 import HomeM from './Pages/HomeM';
 import { useProductsQuery } from './services/ProductsApi';
 import HomeLoading from './Pages/HomeLoading';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import LogIn from './Pages/Auth/LogIn';
 import SignUp from './Pages/Auth/SignUp';
+import { useLoginMutation } from './services/AuthApi';
 
 function App() {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
@@ -30,13 +31,15 @@ function App() {
   
   const data = useProductsQuery()
   const loading = data?.isLoading
+  console.log(data?.isLoading);
 
   const token = Cookies.get('token')
+  
   return (
  <BrowserRouter>
  <div className=' overflow-y-hidden z-[999] ' >
   {
-    token &&   <>
+    loading===false && token &&   <>
     {
     isDesktop && <NavBar hideMenu={hideMenu} showMenu={showMenu}/>
    }{
@@ -56,6 +59,9 @@ function App() {
     {
       loading===true && <Route exact path={'/'} element={<HomeLoading/>}  />
     }
+    {/* {
+      !token && <Route exact path={'/'} element={<LogIn/>}  />
+    } */}
     {
       isDesktop &&       <Route exact path={'/'} element={<Home hideMenu={hideMenu} showMenu={showMenu} menu={menu} />}  />
 
