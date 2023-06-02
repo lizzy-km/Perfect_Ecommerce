@@ -14,7 +14,7 @@ const SliderM = () => {
     const sliderProducts = data?.data;
     return (
         <div className=' rounded-b-[30px] border  flex w-[100%] bg-[#d3dddd] mt-[0px] h-[300px] ' >
-            <Carousel className='slide1 rounded-b-[30px]  w-[100%]'
+            <Carousel className='slide1 rounded-b-[20px]  w-[100%]'
           maw='100%'
         //   mx="auto"
           withIndicators

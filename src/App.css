@@ -15,3 +15,25 @@
 *::-webkit-scrollbar{
   display: none;
 }
+
+.text-shadow{
+  text-shadow: 1px 1px 1px #111111;
+}
+.text-sh-w{
+  text-shadow: 1px 1px 1px #D3DDDD;
+}
+.box-shadow{
+  box-shadow: 2px 2px 1px #3d3d3d;
+}
+
+@media only screen and (max-width:760px) {
+  .text-shadow{
+    text-shadow: .5px .5px 1px #111111;
+  }
+  .text-sh-w{
+    text-shadow: .5px .5px 1px #D3DDDD;
+  }
+  .box-shadow{
+    box-shadow: 1px 1px 1px #3d3d3d;
+  }
+}

@@ -36,10 +36,10 @@ const NavBarM = () => {
         </div>
     
     <div className={menu} >
-        <div className=' h-full  text-[30px] flex items-center text-[#626a74] '>
+        <div className=' h-full  text-[30px] flex items-center text-[#D3DDDD] '>
             <IoIosClose onClick={closeMenu} className='cursor-pointer'/>
         </div>
-        <div className=' flex w-[70%] items-center h-full text-[#626a74] ' >
+        <div className=' flex w-[70%] items-center h-full text-[#D3DDDD] ' >
         <Input className='flex justify-between w-full'
       icon={<IoIosSearch />}
       variant="unstyled"
@@ -47,10 +47,10 @@ const NavBarM = () => {
       radius="xl"
     />
         </div>
-        <div className=' h-full  text-[30px] flex items-center text-[#626a74] ' >
+        <div className=' h-full  text-[30px] flex items-center text-[#D3DDDD] ' >
             <TfiShoppingCartFull className='cursor-pointer'/>
         </div>
-        <div className=' h-full  text-[30px] flex items-center text-[#626a74] '>
+        <div className=' h-full  text-[30px] flex items-center text-[#D3DDDD] '>
                 <HiOutlineUserCircle className='cursor-pointer'/>
             </div>
     </div>

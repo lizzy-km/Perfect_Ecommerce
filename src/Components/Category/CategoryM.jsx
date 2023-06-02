@@ -33,7 +33,7 @@ const CategoryM = () => {
         setSearch(showSearch)
         setCat('d-n')
     }}
-icon={<IoIosSearch className='text-[1rem]'  />}
+icon={<IoIosSearch className='text-[1rem] text-[#D3DDDD] '  />}
 placeholder=""
 radius="xl"
 
@@ -54,7 +54,7 @@ radius="xl"
                 Category?.map(data =>{
                   return(
                     <div className={cat} >
-                      <p className=' cursor-pointer ' > {data} </p>
+                      <p className=' cursor-pointer text-[#D3DDDD] text-shadow ' > {data} </p>
                     </div>
                   )
                 })

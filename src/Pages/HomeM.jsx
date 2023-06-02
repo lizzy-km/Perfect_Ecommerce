@@ -48,12 +48,12 @@ const HomeM = () => {
 
     if (loading===false) {
         return (
-            <div className=' overflow-y-hidden   flex flex-col w-[100%] ' >
+            <div className=' overflow-x-hidden   flex flex-col w-[100%] ' >
                 <div className=' flex w-[100%] h-auto ' >
                     <SliderM/>
                 </div>
-                <div className=' mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
-                    <div className=' flex w-[100%] h-[40px] justify-center items-center  ' >
+                <div className=' mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[20px] bg-[#75848E] h-[900px] ' >
+                    <div className=' flex mt-[0px] w-[100%] h-[40px] justify-center items-center  ' >
                         <CategoryM/>
                     </div>
                 </div>

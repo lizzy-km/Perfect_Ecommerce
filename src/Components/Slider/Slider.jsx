@@ -47,7 +47,7 @@ const Slider = () => {
                 return(
                     <Carousel.Slide key={data?.id} className='rounded-b-[30px]' >
                     <div className='z-[-1] rounded-b-[30px]  flex items-center justify-center h-[450px] w-[100%] ' >
-                          <div className=' slideBlur w-[95%] h-[85%] ' >
+                          <div className=' slideBlur shadow-lg w-[95%] h-[85%] ' >
                               <SlideCard data={data} />
                           </div>
                       </div>

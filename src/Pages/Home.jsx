@@ -55,7 +55,7 @@ const Home = ({menu,showMenu,hideMenu}) => {
 
     if (loading ===false) {
         return (
-            <div className=' relative   flex flex-col w-[100%] ' >
+            <div className=' overflow-x-hidden relative   flex flex-col w-[100%] ' >
                 <div className=' flex w-[100%] h-auto ' >
                     <Slider/>
                 </div>

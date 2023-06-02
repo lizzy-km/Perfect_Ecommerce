@@ -27,10 +27,10 @@ if (loading===false) {
             </div>
     
             <div className=' flex h-[100%] items-center gap-6 ' >
-                <div className=' h-full text-[20px] flex items-center text-[#626a74] ' >
-                    <TfiShoppingCartFull className='cursor-pointer' />
+                <div className=' h-full text-[20px] flex items-center text-[#D3DDDD] ' >
+                    <TfiShoppingCartFull className='cursor-pointer text-shadow ' />
                 </div>
-                <div onMouseEnter={showMenu} onMouseLeave={hideMenu} className=' z-[100] h-full text-[20px] flex items-center text-[#626a74] '>
+                <div onMouseEnter={showMenu} onMouseLeave={hideMenu} className=' z-[100] h-full text-[20px] flex items-center text-[#D3DDDD] '>
                 <HiOutlineUserCircle className='cursor-pointer'/>
                     
                 </div>
