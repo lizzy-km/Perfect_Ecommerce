@@ -5,8 +5,8 @@ import { useLogoutMutation } from '../services/AuthApi'
 import { useDispatch } from 'react-redux'
 import { removeToken, removeUser } from '../services/AuthSlice'
 import { useProductsQuery } from '../services/ProductsApi'
-import Category from '../Components/Category/Category'
 import SliderM from '../Components/Slider/SliderM'
+import CategoryM from '../Components/Category/CategoryM'
 const HomeM = () => {
     const token = Cookies.get('token')
     // const user = Cookies.get('user')
@@ -53,8 +53,8 @@ const HomeM = () => {
                     <SliderM/>
                 </div>
                 <div className=' mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
-                    <div className=' flex  ' >
-                        <Category/>
+                    <div className=' flex w-[100%] h-[40px] justify-center items-center  ' >
+                        <CategoryM/>
                     </div>
                 </div>
            

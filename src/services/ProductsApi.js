@@ -23,9 +23,19 @@ export const ProductsApi = createApi({
         }),
         providesTags:["product"]
       }),
-  
+
+      //products/categories
+      
+      productsCategory: builder.query({
+        query:(user)=>({
+          url:"/products/categories",
+          method:"GET",
+          body:user,
+        }),
+        providesTags:["product"]
+      }),
       
       
     }),
 })
-export const { useProductsQuery, useSliderProductsQuery } = ProductsApi
+export const { useProductsQuery, useSliderProductsQuery,useProductsCategoryQuery } = ProductsApi

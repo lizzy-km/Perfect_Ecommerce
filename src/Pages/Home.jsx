@@ -59,11 +59,15 @@ const Home = ({menu,showMenu,hideMenu}) => {
                 <div className=' flex w-[100%] h-auto ' >
                     <Slider/>
                 </div>
-                <div className=' mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
-                    <div className=' flex  ' >
+                <div className='sticky w-[100%] mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
+                    <div className=' w-[100%] flex items-center justify-center h-[80px]   ' >
                         <Category/>
                     </div>
                 </div>
+
+
+
+
                 <div onMouseEnter={showMenu} onMouseLeave={hideMenu} className={menu} >
                 <div className=' cursor-pointer ' >
                     <p>Account Setting</p>

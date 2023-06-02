@@ -14,7 +14,7 @@ const SliderM = () => {
     const sliderProducts = data?.data;
     return (
         <div className=' rounded-b-[30px] border  flex w-[100%] bg-[#d3dddd] mt-[0px] h-[300px] ' >
-            <Carousel className=' rounded-b-[30px]  w-[100%]'
+            <Carousel className='slide1 rounded-b-[30px]  w-[100%]'
           maw='100%'
         //   mx="auto"
           withIndicators
@@ -40,7 +40,7 @@ const SliderM = () => {
                 sliderProducts?.map(data =>{
                     return(
                         <Carousel.Slide key={data?.id} className='rounded-b-[30px]' >
-                        <div className='z-[-1] rounded-b-[30px] slide1 flex items-center justify-center h-[300px] w-[100%] ' >
+                        <div className='z-[-1] rounded-b-[30px]  flex items-center justify-center h-[300px] w-[100%] ' >
                               <div className=' slideBlur w-[95%] h-[70%] ' >
                                   <SlideCardM data={data} />
                               </div>

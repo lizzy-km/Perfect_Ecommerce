@@ -1,0 +1,17 @@
+.category{
+    background: rgba(211, 219, 221, 0.5);
+box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+backdrop-filter: blur(10px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 30px;
+}
+
+@media only screen and (max-width:760px) {
+    .mantine-4g8dsw[data-with-icon] {
+        padding-left: 0rem !important ;
+    }
+    .d-n{
+        display: none;
+    }
+}
