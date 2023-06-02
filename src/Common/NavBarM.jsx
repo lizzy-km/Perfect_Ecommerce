@@ -9,7 +9,7 @@ import {HiOutlineUserCircle} from 'react-icons/hi'
 
 const NavBarM = () => {
 
-    const[menu,setMenu] = useState(' absolute right-[-300px] flex h-[100%] items-center justify-between ')
+    const[menu,setMenu] = useState(' absolute right-[-350px] flex h-[100%] items-center justify-between ')
 
     const openMenu =()=>{
         setMenu(' bg-[#242424] px-[10px] w-[100%] absolute right-[0px] flex h-[100%] items-center justify-between ')

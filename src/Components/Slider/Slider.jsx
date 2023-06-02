@@ -16,12 +16,12 @@ const Slider = () => {
     const sliderProducts = data?.data;
 
   return (
-    <div className=' rounded-b-[30px] border  flex w-[100%] bg-[#d3dddd] mt-[0px] h-[570px] ' >
+    <div className=' rounded-b-[30px] border  flex w-[100%] bg-[#d3dddd] mt-[0px] h-[450px] ' >
         <Carousel className=' rounded-b-[30px]  w-[100%]'
       maw='100%'
     //   mx="auto"
       withIndicators
-      height={570}
+      height={450}
       width='100%'
       plugins={[autoplay.current]}
       onMouseEnter={autoplay.current.stop}
@@ -29,14 +29,14 @@ const Slider = () => {
       styles={{
         indicator: {
 
-          width: rem(10),
-          height: rem(10),
+          width: rem(8),
+          height: rem(8),
           transition: 'width 250ms ease',
         //   color:'#222222',
 
           '&[data-active]': {
-            width: rem(16),
-            height:rem(16)
+            width: rem(12),
+            height:rem(12)
           },
         },
       }}
@@ -45,7 +45,7 @@ const Slider = () => {
             sliderProducts?.map(data =>{
                 return(
                     <Carousel.Slide key={data?.id} className='rounded-b-[30px]' >
-                    <div className='z-[-1] rounded-b-[30px] slide1 flex items-center justify-center h-[570px] w-[100%] ' >
+                    <div className='z-[-1] rounded-b-[30px] slide1 flex items-center justify-center h-[450px] w-[100%] ' >
                           <div className=' slideBlur w-[95%] h-[85%] ' >
                               <SlideCard data={data} />
                           </div>

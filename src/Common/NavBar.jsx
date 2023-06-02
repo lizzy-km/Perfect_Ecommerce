@@ -14,23 +14,23 @@ const NavBar = ({showMenu,hideMenu}) => {
 
 if (loading===false) {
     return (
-        <div className=' relative overflow-y-hidden z-[99999] w-[100%] flex h-[70px] items-center px-[40px] nav justify-between ' >
+        <div className=' relative overflow-y-hidden z-[99999] w-[100%] flex h-[60px] items-center px-[40px] nav justify-between ' >
             <div className=' flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
-                <div className=' rounded-l-[10px] text-[#7A838F] bg-[#D3DDDD] text-[40px] pl-[10px] max-h-[50px] text-center  flex items-center   '>
+                <div className=' rounded-l-[10px] text-[#7A838F] bg-[#D3DDDD] text-[30px] pl-[10px] max-h-[50px] text-center  flex items-center   '>
                 <p  >P</p>
     
                 </div>
-                <div className=' rounded-r-[10px] text-[#D3DDDD] bg-[#7A838F] text-[40px] pr-[10px] max-h-[55px] text-center flex items-center   '>
+                <div className=' rounded-r-[10px] text-[#D3DDDD] bg-[#7A838F] text-[30px] pr-[10px] max-h-[55px] text-center flex items-center   '>
                 <p  >erfect</p>
     
                 </div>
             </div>
     
             <div className=' flex h-[100%] items-center gap-6 ' >
-                <div className=' h-full text-[30px] flex items-center text-[#626a74] ' >
+                <div className=' h-full text-[20px] flex items-center text-[#626a74] ' >
                     <TfiShoppingCartFull className='cursor-pointer' />
                 </div>
-                <div onMouseEnter={showMenu} onMouseLeave={hideMenu} className=' z-[100] h-full text-[30px] flex items-center text-[#626a74] '>
+                <div onMouseEnter={showMenu} onMouseLeave={hideMenu} className=' z-[100] h-full text-[20px] flex items-center text-[#626a74] '>
                 <HiOutlineUserCircle className='cursor-pointer'/>
                     
                 </div>

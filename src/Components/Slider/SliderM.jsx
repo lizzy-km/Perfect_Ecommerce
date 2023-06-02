@@ -30,8 +30,8 @@ const SliderM = () => {
             //   color:'#222222',
     
               '&[data-active]': {
-                width: rem(10),
-                height:rem(10)
+                width: rem(8),
+                height:rem(8)
               },
             },
           }}

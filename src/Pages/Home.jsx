@@ -77,10 +77,10 @@ const Home = ({menu,showMenu,hideMenu}) => {
     }else{
         return (
             <div className='   flex flex-col w-[100%] ' >
-                <div className=' flex w-[100%] h-[570px] rounded-b-[30px] bg-[#d3dddd] ' >
+                <div className='  flex w-[100%] h-[450px] rounded-b-[30px] bg-[#d3dddd] ' >
                     {/* <Slider/> */}
                 </div>
-                <div className=' mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
+                <div className='  mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
                     <div className=' flex  ' >
                         {/* <Category/> */}
                     </div>
