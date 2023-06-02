@@ -15,7 +15,7 @@ const NavBarM = () => {
         setMenu(' bg-[#242424] px-[10px] w-[100%] absolute right-[0px] flex h-[100%] items-center justify-between ')
     }
     const closeMenu =()=>{
-        setMenu(' absolute right-[-300px] flex h-[100%] items-center justify-between ')
+        setMenu(' absolute right-[-350px] flex h-[100%] items-center justify-between ')
     }
 
 
