@@ -16,12 +16,12 @@ const Slider = () => {
     const sliderProducts = data?.data;
 
   return (
-    <div className=' rounded-b-[30px] border  flex w-[100%] bg-[#d3dddd] mt-[0px] h-[450px] ' >
+    <div className=' rounded-b-[30px] border  flex w-[100%] bg-[#d3dddd] mt-[10px] h-[530px] ' >
         <Carousel className='slide1 rounded-b-[30px]  w-[100%]'
       maw='100%'
     //   mx="auto"
       withIndicators
-      height={450}
+      height={530}
       width='100%'
       
       plugins={[autoplay.current]}
@@ -46,8 +46,8 @@ const Slider = () => {
             sliderProducts?.map(data =>{
                 return(
                     <Carousel.Slide key={data?.id} className='rounded-b-[30px]' >
-                    <div className='z-[-1] rounded-b-[30px]  flex items-center justify-center h-[450px] w-[100%] ' >
-                          <div className=' slideBlur shadow-lg w-[95%] h-[85%] ' >
+                    <div className='z-[-1] rounded-b-[30px]  flex items-center justify-center h-[530px] w-[100%] ' >
+                          <div className=' slideBlur shadow-lg mt-[10px] w-[95%] h-[80%] ' >
                               <SlideCard data={data} />
                           </div>
                       </div>
