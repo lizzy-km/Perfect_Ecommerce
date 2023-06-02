@@ -27,7 +27,7 @@ const HomeLoading = () => {
   if (isTablet) {
     return (
       <div className=' flex justify-center items-center w-[100%] h-screen ' >
-           <div className=' flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
+           <div className='loader flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
                   <div className=' rounded-l-[20px] text-[#7A838F] bg-[#D3DDDD] text-[80px] pl-[20px] h-[80px] text-center  flex items-center   '>
                   <p  >P</p>
       
@@ -44,7 +44,7 @@ const HomeLoading = () => {
   if (isMobile) {
     return (
       <div className=' flex justify-center items-center w-[100%] h-screen ' >
-           <div className=' flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
+           <div className='loader flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
                   <div className=' rounded-l-[20px] text-[#7A838F] bg-[#D3DDDD] text-[50px] pl-[20px] h-[60px] text-center  flex items-center   '>
                   <p  >P</p>
       

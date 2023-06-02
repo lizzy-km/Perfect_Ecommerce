@@ -43,20 +43,43 @@ const HomeM = () => {
     const data = useProductsQuery()
 
     console.log(data?.isLoading);
-   
-    return (
-        <div className=' overflow-y-hidden   flex flex-col w-[100%] ' >
-            <div className=' flex w-[100%] h-auto ' >
-                <SliderM/>
-            </div>
-            <div className=' mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
-                <div className=' flex  ' >
-                    <Category/>
+
+    const loading = data?.isLoading
+
+    if (loading===false) {
+        return (
+            <div className=' overflow-y-hidden   flex flex-col w-[100%] ' >
+                <div className=' flex w-[100%] h-auto ' >
+                    <SliderM/>
                 </div>
+                <div className=' mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
+                    <div className=' flex  ' >
+                        <Category/>
+                    </div>
+                </div>
+           
             </div>
-       
-        </div>
-      )
+          )
+    }else{
+        return (
+            <div className=' relative overflow-y-hidden   flex flex-col w-[100%] ' >
+                <div className=' flex w-[100%] rounded-b-[30px] bg-[#d3dddd] h-[300px] ' >
+                    {/* <SliderM/> */}
+                </div>
+                <div className=' mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
+                    <div className=' flex  ' >
+                        {/* <Category/> */}
+                    </div>
+                </div>
+                <div className=' loaderBlur absolute w-[300px] z-[1] rounded-full top-[12%] left-[20%]  h-[300px]  ' >
+                    
+                </div>
+           
+            </div>
+          )
+    }
+   
+   
 }
 
 export default HomeM

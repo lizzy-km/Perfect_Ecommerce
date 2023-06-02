@@ -4,6 +4,12 @@
     border-radius: 8px;
 }
 
-
+.loaderBlur{
+    background: rgba(50, 95, 103, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    /* border-radius: 10px; */
+    /* rotate: 40deg; */
+    filter: blur(8px);
+}
 
  
