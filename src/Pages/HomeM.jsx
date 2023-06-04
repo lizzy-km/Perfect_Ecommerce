@@ -67,7 +67,7 @@ const HomeM = () => {
           )
     }else{
         return (
-            <div className=' relative overflow-y-hidden   flex flex-col w-[100%] ' >
+            <div className=' relative overflow-y-hidden h-auto   flex flex-col w-[100%] ' >
                 <div className=' flex w-[100%] rounded-b-[30px] bg-[#d3dddd] h-[300px] ' >
                     {/* <SliderM/> */}
                 </div>
@@ -76,8 +76,15 @@ const HomeM = () => {
                         {/* <Category/> */}
                     </div>
                 </div>
-                <div className=' loaderBlur absolute w-[300px] z-[1] rounded-full top-[12%] left-[20%]  h-[300px]  ' >
+                <div className='  absolute w-[100%] z-[1] flex flex-col justify-center items-center    h-[580px]  ' >
+                    <div className=' flex bg-blur  w-[100%] h-[screen] justify-center items-center ' >
                     
+                     <div className='loaderBlur  rounded-full mr-[-0px] '  >
+                        
+                        </div>
+                       
+                    </div>
+                   
                 </div>
            
             </div>

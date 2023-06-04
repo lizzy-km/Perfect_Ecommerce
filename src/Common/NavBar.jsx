@@ -5,12 +5,15 @@ import {HiOutlineUserCircle} from 'react-icons/hi'
 import { useProductsQuery } from '../services/ProductsApi'
 import { Menu, Button, Text } from '@mantine/core';
 import { IconSettings, IconSearch, IconPhoto, IconMessageCircle, IconTrash, IconArrowsLeftRight } from '@tabler/icons-react';
+import { useSelector } from 'react-redux'
 
 
 const NavBar = ({showMenu,hideMenu}) => {
 
     const data = useProductsQuery()
     const loading = data?.isLoading
+
+    const cart = useSelector(state => state?.productsSlice?.Cart)
 
 if (loading===false) {
     return (
@@ -27,8 +30,14 @@ if (loading===false) {
             </div>
     
             <div className=' flex h-[100%] items-center gap-6 ' >
-                <div className=' h-full text-[20px] flex items-center text-[#D3DDDD] ' >
-                    <TfiShoppingCartFull className='cursor-pointer text-shadow ' />
+                <div className=' relative h-full text-[20px] flex items-center text-[#D3DDDD] ' >
+                    <TfiShoppingCartFull className='cursor-pointer text-shadow z-[11] ' />
+                    {
+                        cart?.length !==0 && <span className=' nav absolute flex justify-center items-center text-sm  h-[1rem] top-[8%] z-[-1] left-[25%] w-[1rem] rounded-full text-[#d1dadd] text-center ' > 
+                        <p>{cart?.length}</p>
+                         </span>
+                    }
+                    
                 </div>
                 <div onMouseEnter={showMenu} onMouseLeave={hideMenu} className=' z-[100] h-full text-[20px] flex items-center text-[#D3DDDD] '>
                 <HiOutlineUserCircle className='cursor-pointer'/>

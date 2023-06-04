@@ -10,13 +10,13 @@ const HomeLoading = () => {
 
   if (isDesktop) {
     return (
-      <div className=' flex justify-center items-center w-[100%] h-[500px] ' >
-           <div className=' loader flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
-                  <div className='  rounded-l-[20px] text-[#7A838F] bg-[#D3DDDD] text-[80px] pl-[20px] h-[80px] text-center  flex items-center   '>
+      <div className=' relative flex justify-center items-center w-[100%] h-[500px] ' >
+           <div className=' loader flex items-center justify-center   font-[600] tracking-wider ' >
+                  <div className='  rounded-l-[20px] text-[#7A838F] bg-[#D3DDDD]  pl-[20px] h-[80px] text-center  flex items-center   '>
                   <p  >P</p>
       
                   </div>
-                  <div className='  rounded-r-[20px] text-[#D3DDDD] bg-[#7A838F] text-[80px] pr-[20px] h-[85px] text-center flex justify-center items-center   '>
+                  <div className='  rounded-r-[20px] text-[#D3DDDD] bg-[#7A838F] pr-[20px] h-[85px] text-center flex justify-center items-center   '>
                   <p  >erfect</p>
       
                   </div>
@@ -26,13 +26,13 @@ const HomeLoading = () => {
   }
   if (isTablet) {
     return (
-      <div className=' flex justify-center items-center w-[100%] h-screen ' >
-           <div className='loader flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
-                  <div className=' rounded-l-[20px] text-[#7A838F] bg-[#D3DDDD] text-[80px] pl-[20px] h-[80px] text-center  flex items-center   '>
+      <div className=' relative flex justify-center items-center w-[100%] h-screen ' >
+           <div className='loader flex items-center justify-center  font-[600] tracking-wider ' >
+                  <div className=' rounded-l-[20px] text-[#7A838F] bg-[#D3DDDD]  pl-[20px] h-[80px] text-center  flex items-center   '>
                   <p  >P</p>
       
                   </div>
-                  <div className=' rounded-r-[20px] text-[#D3DDDD] bg-[#7A838F] text-[80px] pr-[20px] h-[85px] text-center flex justify-center items-center   '>
+                  <div className=' rounded-r-[20px] text-[#D3DDDD] bg-[#7A838F]  pr-[20px] h-[85px] text-center flex justify-center items-center   '>
                   <p  >erfect</p>
       
                   </div>
@@ -43,13 +43,13 @@ const HomeLoading = () => {
 
   if (isMobile) {
     return (
-      <div className=' flex justify-center items-center w-[100%] h-screen ' >
-           <div className='loader flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
-                  <div className=' rounded-l-[20px] text-[#7A838F] bg-[#D3DDDD] text-[50px] pl-[20px] h-[60px] text-center  flex items-center   '>
+      <div className=' relative flex justify-center items-center w-[100%] h-screen ' >
+           <div className='loader flex items-center justify-center   font-[600] tracking-wider ' >
+                  <div className=' rounded-l-[20px] text-[#7A838F] bg-[#D3DDDD]  pl-[20px] h-[60px] text-center  flex items-center   '>
                   <p  >P</p>
       
                   </div>
-                  <div className=' rounded-r-[20px] text-[#D3DDDD] bg-[#7A838F] text-[50px] pr-[20px] h-[65px] text-center flex justify-center items-center   '>
+                  <div className=' rounded-r-[20px] text-[#D3DDDD] bg-[#7A838F]  pr-[20px] h-[65px] text-center flex justify-center items-center   '>
                   <p  >erfect</p>
       
                   </div>

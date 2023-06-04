@@ -4,12 +4,70 @@
     border-radius: 8px;
 }
 
-.loaderBlur{
-    background: rgba(50, 95, 103, 0.3) !important;
+
+.loaderBlur:after{
+    content: '';
+    background: rgba(95, 114, 131, 0.6) !important;
     backdrop-filter: blur(10px) !important;
-    /* border-radius: 10px; */
-    /* rotate: 40deg; */
-    filter: blur(8px);
+    width: 100px;
+    position: absolute;
+    height: 100px;
+    rotate: -100deg;
+    left: 0%;
+    top: 43%;
+    border-radius: 30%;
+    animation: loader 2s ease-in-out infinite;
+    transition: .3s all;
+}
+@keyframes loader {
+    0% {
+      /* transform: translateX(-100%); */
+      width: 100px;
+      height: 100px;
+      rotate: -300deg;
+      border-radius: 30%;
+      left: 0%;
+    }
+
+    50%{
+        width: 300px;
+        left: 100%;
+        height: 300px;
+    }
+  
+    100% {
+      width: 100px;
+      rotate: 560deg;
+      left: 100%;
+      height: 100px;
+    }
+    50% {
+        /* transform: translateX(-100%); */
+        width: 100px;
+        height: 100px;
+        rotate: -300deg;
+        border-radius: 30%;
+        left: 0%;
+      }
+  
+      100%{
+          width: 100px;
+          left: 100%;
+          height: 100px;
+      }
+    
+      0% {
+        width: 100px;
+        rotate: 560deg;
+        left: 100%;
+        height: 100px;
+      }
+  }
+.bg-blur{
+    background-color: #1d2f394c;
+    height: 150%;
+    /* height: 150%;
+    filter: blur(0px) contrast(20) !important; */
 }
 
  
