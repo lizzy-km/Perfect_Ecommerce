@@ -15,6 +15,11 @@
 *::-webkit-scrollbar{
   display: none;
 }
+.buttonBlur{
+  background: rgba(37, 32, 32, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 10px;
+}
 
 .text-shadow{
   text-shadow: 1px 1px 1px #111111;

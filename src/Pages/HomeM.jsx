@@ -4,9 +4,10 @@ import {Link, useNavigate} from 'react-router-dom'
 import { useLogoutMutation } from '../services/AuthApi'
 import { useDispatch } from 'react-redux'
 import { removeToken, removeUser } from '../services/AuthSlice'
-import { useProductsQuery } from '../services/ProductsApi'
+import { useProductsQuery, useSliderProductsQuery } from '../services/ProductsApi'
 import SliderM from '../Components/Slider/SliderM'
 import CategoryM from '../Components/Category/CategoryM'
+import SliderLoaderM from '../Components/Slider/SliderLoaderM'
 const HomeM = () => {
     const token = Cookies.get('token')
     // const user = Cookies.get('user')
@@ -40,7 +41,7 @@ const HomeM = () => {
         }
     }
 
-    const data = useProductsQuery()
+    const data = useSliderProductsQuery()
 
     console.log(data?.isLoading);
 
@@ -69,14 +70,14 @@ const HomeM = () => {
         return (
             <div className=' relative overflow-y-hidden h-auto   flex flex-col w-[100%] ' >
                 <div className=' flex w-[100%] rounded-b-[30px] bg-[#d3dddd] h-[300px] ' >
-                    {/* <SliderM/> */}
+                    <SliderLoaderM/>
                 </div>
                 <div className=' mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
                     <div className=' flex  ' >
                         {/* <Category/> */}
                     </div>
                 </div>
-                <div className='  absolute w-[100%] z-[1] flex flex-col justify-center items-center    h-[580px]  ' >
+                {/* <div className='  absolute w-[100%] z-[1] flex flex-col justify-center items-center    h-[580px]  ' >
                     <div className=' flex bg-blur  w-[100%] h-[screen] justify-center items-center ' >
                     
                      <div className='loaderBlur  rounded-full mr-[-0px] '  >
@@ -85,7 +86,7 @@ const HomeM = () => {
                        
                     </div>
                    
-                </div>
+                </div> */}
            
             </div>
           )

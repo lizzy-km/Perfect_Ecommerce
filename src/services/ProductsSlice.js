@@ -25,6 +25,8 @@ const storedCart = Cookies.get(STORAGE_KEY_Cart) ? JSON.parse(Cookies.get(STORAG
 if (storedProducts && storedCart) { 
   initialState.Products = storedProducts.Products
   initialState.Cart = storedCart.Cart
+  initialState.quantity = storedCart.quantity
+  initialState.totalamount= storedCart.totalamount
 }
 
 
@@ -43,13 +45,18 @@ export const productSlice = createSlice({
             if (isExisted) {
                 return state
             }else{
-                state.Cart = [...state.Cart,{ ...payload,quantity:1}];
+                state.Cart = [...state.Cart,{...payload, quantity:1}];
+                // Cookies.set(STORAGE_KEY_Cart, JSON.stringify(state));
+
+                // payload.quantity +=1;
             }
 
             
-            state.quantity++;
-            state.totalAmount += payload.price * payload.quantity;
+            state.quantity +=1;
+            state.totalamount += payload?.price;
             Cookies.set(STORAGE_KEY_Cart, JSON.stringify(state));
+            // Cookies.set(STORAGE_KEY_Cart, JSON.stringify(payload));
+
 
         },
         removeProducts: (state, {payload} ) => {
@@ -61,23 +68,55 @@ export const productSlice = createSlice({
                 (data) => data.id !== payload.id
             );
             state.quantity--;
-            state.totalAmount -= payload.price * payload.quantity;
+            state.totalamount -= payload.price * payload.quantity;
             Cookies.set(STORAGE_KEY_Cart, JSON.stringify(state));
+
+
         },
         addCartQuantity : (state,{payload}) =>{
             state.Cart = state.Cart.map((data)=>{
                 if (data.id===payload.id) {
                     return {...data, quantity: data.quantity +1 };
+                    
                 }else{
                     return data
                 }
             })
             state.quantity++;
-            state.totalAmount += payload.price * payload.quantity;
+            state.totalamount += payload.price;
             Cookies.set(STORAGE_KEY_Cart, JSON.stringify(state));
+            // Cookies.set(STORAGE_KEY_Cart, JSON.stringify(payload));
+
+        },
+        subtractCartQuantity: (state,{payload}) =>{
+            const subItem = state.Cart.find((item) =>item.id === payload.id );
+            if (subItem.quantity > 1) {
+                state.Cart = state.Cart.map((item) =>{
+                    if (item.id === payload.id && payload.quantity > 1) {
+                        return{...item,quantity:item.quantity -1};
+
+                        // state.quantity--;
+               
+                        
+                    }else{
+                        return item
+                    }
+                });
+            }
+          
+            if (payload.quantity > 1) {
+                state.quantity--;
+                state.totalamount -=payload.price
+
+
+                
+            }
+            Cookies.set(STORAGE_KEY_Cart, JSON.stringify(state));
+            // Cookies.set(STORAGE_KEY_Cart, JSON.stringify(payload));
+
         }
     }
 })
 
-export const { addProducts,addCart,removeProducts,removeCart,addCartQuantity } = productSlice.actions
+export const { addProducts,addCart,removeProducts,removeCart,addCartQuantity,subtractCartQuantity } = productSlice.actions
 export default productSlice.reducer

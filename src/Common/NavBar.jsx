@@ -6,6 +6,7 @@ import { useProductsQuery } from '../services/ProductsApi'
 import { Menu, Button, Text } from '@mantine/core';
 import { IconSettings, IconSearch, IconPhoto, IconMessageCircle, IconTrash, IconArrowsLeftRight } from '@tabler/icons-react';
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 
 const NavBar = ({showMenu,hideMenu}) => {
@@ -18,7 +19,7 @@ const NavBar = ({showMenu,hideMenu}) => {
 if (loading===false) {
     return (
         <div className=' relative overflow-y-hidden z-[99999] w-[100%] flex h-[60px] items-center px-[40px] nav justify-between ' >
-            <div className=' flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
+            <Link to={'/'} className=' flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
                 <div className=' rounded-l-[10px] text-[#7A838F] bg-[#D3DDDD] text-[30px] pl-[10px] max-h-[50px] text-center  flex items-center   '>
                 <p  >P</p>
     
@@ -27,10 +28,10 @@ if (loading===false) {
                 <p  >erfect</p>
     
                 </div>
-            </div>
+            </Link>
     
             <div className=' flex h-[100%] items-center gap-6 ' >
-                <div className=' relative h-full text-[20px] flex items-center text-[#D3DDDD] ' >
+                <Link to={'/cart'} className=' relative h-full text-[20px] flex items-center text-[#D3DDDD] ' >
                     <TfiShoppingCartFull className='cursor-pointer text-shadow z-[11] ' />
                     {
                         cart?.length !==0 && <span className=' nav absolute flex justify-center items-center text-sm  h-[1rem] top-[8%] z-[-1] left-[25%] w-[1rem] rounded-full text-[#d1dadd] text-center ' > 
@@ -38,7 +39,7 @@ if (loading===false) {
                          </span>
                     }
                     
-                </div>
+                </Link>
                 <div onMouseEnter={showMenu} onMouseLeave={hideMenu} className=' z-[100] h-full text-[20px] flex items-center text-[#D3DDDD] '>
                 <HiOutlineUserCircle className='cursor-pointer'/>
                     

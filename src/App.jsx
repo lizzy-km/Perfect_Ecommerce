@@ -12,6 +12,7 @@ import Cookies from 'js-cookie';
 import LogIn from './Pages/Auth/LogIn';
 import SignUp from './Pages/Auth/SignUp';
 import { useLoginMutation } from './services/AuthApi';
+import Cart from './Pages/Cart';
 
 function App() {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
@@ -63,13 +64,25 @@ function App() {
       !token && <Route exact path={'/'} element={<LogIn/>}  />
     } */}
     {
-      isDesktop &&       <Route exact path={'/'} element={<Home hideMenu={hideMenu} showMenu={showMenu} menu={menu} />}  />
+      isDesktop &&       <>
+      <Route exact path={'/'} element={<Home hideMenu={hideMenu} showMenu={showMenu} menu={menu} />}  />
+                        <Route exact path={'/cart'} element={<Cart hideMenu={hideMenu} showMenu={showMenu} menu={menu} />}  />
+
+      </>
+      
+    }{
+      isTablet &&      <>
+      <Route exact path={'/cart'} element={<Cart hideMenu={hideMenu} showMenu={showMenu} menu={menu} />}  />
+      <Route exact path={'/'} element={<Home hideMenu={hideMenu} showMenu={showMenu} menu={menu}/>}  />
+
+      </> 
 
     }{
-      isTablet &&       <Route exact path={'/'} element={<Home hideMenu={hideMenu} showMenu={showMenu} menu={menu}/>}  />
-
-    }{
-      isMobile &&       <Route exact path={'/'} element={<HomeM/>}  />
+      isMobile &&     <>
+       <Route exact path={'/'} element={<HomeM/>}  />
+      <Route exact path={'/cart'} element={<Cart hideMenu={hideMenu} showMenu={showMenu} menu={menu} />}  />
+      </>
+       
 
     }
     {/* </div> */}

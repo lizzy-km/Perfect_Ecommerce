@@ -4,11 +4,12 @@ import {Link, useNavigate} from 'react-router-dom'
 import { useLogoutMutation } from '../services/AuthApi'
 import { useDispatch, useSelector } from 'react-redux'
 import { removeToken, removeUser } from '../services/AuthSlice'
-import { useProductsQuery } from '../services/ProductsApi'
+import { useProductsQuery, useSliderProductsQuery } from '../services/ProductsApi'
 import Slider from '../Components/Slider/Slider'
 import Category from '../Components/Category/Category'
 import { addProducts, removeProducts } from '../services/ProductsSlice'
 import'./home.css'
+import SliderLoader from '../Components/Slider/SliderLoder'
 
 const Home = ({menu,showMenu,hideMenu}) => {
     const token = Cookies.get('token')
@@ -43,13 +44,10 @@ const Home = ({menu,showMenu,hideMenu}) => {
         }
     }
 
-    const data = useProductsQuery()
-    useEffect(()=>{
-        dispatch(removeProducts(data?.data))
-        // window.location.reload(true)
-    },[])
+    const data = useSliderProductsQuery()
+   
   const loading = data?.isLoading
-    const Products = useSelector(state => state?.productsSlice?.Products)
+    // const Products = useSelector(state => state?.productsSlice?.Products)
 
     // console.log(data);
     console.log(loading);
@@ -83,7 +81,7 @@ const Home = ({menu,showMenu,hideMenu}) => {
         return (
             <div className='   flex flex-col w-[100%] ' >
                 <div className='  flex w-[100%] h-[450px] rounded-b-[30px] bg-[#d3dddd] ' >
-                    {/* <Slider/> */}
+                    <SliderLoader/>
                 </div>
                 <div className='  mainView mt-[-10px] z-[1] flex flex-col items-center justify-between rounded-t-[30px] bg-[#75848E] h-[900px] ' >
                     <div className=' flex  ' >
