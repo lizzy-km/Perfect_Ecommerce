@@ -18,7 +18,7 @@ const NavBar = ({showMenu,hideMenu}) => {
 
 if (loading===false) {
     return (
-        <div className=' relative overflow-y-hidden z-[99999] w-[100%] flex h-[60px] items-center px-[40px] nav justify-between ' >
+        <div className=' relative overflow-hidden z-[99999] w-[100%] flex h-[60px] items-center px-[40px] nav justify-between ' >
             <Link to={'/'} className=' flex items-center justify-center cursor-pointer  font-[600] tracking-wider ' >
                 <div className=' rounded-l-[10px] text-[#7A838F] bg-[#D3DDDD] text-[30px] pl-[10px] max-h-[50px] text-center  flex items-center   '>
                 <p  >P</p>

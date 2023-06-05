@@ -13,6 +13,7 @@ import LogIn from './Pages/Auth/LogIn';
 import SignUp from './Pages/Auth/SignUp';
 import { useLoginMutation } from './services/AuthApi';
 import Cart from './Pages/Cart';
+import CartM from './Pages/CartM';
 
 function App() {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
@@ -38,7 +39,7 @@ function App() {
   
   return (
  <BrowserRouter>
- <div className=' overflow-y-hidden z-[999] ' >
+ <div className=' overflow-x-hidden z-[999] ' >
   {
     loading===false && token &&   <>
     {
@@ -80,7 +81,7 @@ function App() {
     }{
       isMobile &&     <>
        <Route exact path={'/'} element={<HomeM/>}  />
-      <Route exact path={'/cart'} element={<Cart hideMenu={hideMenu} showMenu={showMenu} menu={menu} />}  />
+      <Route exact path={'/cart'} element={<CartM hideMenu={hideMenu} showMenu={showMenu} menu={menu} />}  />
       </>
        
 

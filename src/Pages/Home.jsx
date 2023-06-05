@@ -79,7 +79,7 @@ const Home = ({menu,showMenu,hideMenu}) => {
           )
     }else{
         return (
-            <div className='   flex flex-col w-[100%] ' >
+            <div className=' overflow-x-hidden   flex flex-col w-[100%] ' >
                 <div className='  flex w-[100%] h-[450px] rounded-b-[30px] bg-[#d3dddd] ' >
                     <SliderLoader/>
                 </div>

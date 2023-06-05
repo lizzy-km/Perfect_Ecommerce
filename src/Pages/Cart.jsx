@@ -6,6 +6,7 @@ import {Link, useNavigate} from 'react-router-dom'
 import CartCard from '../Components/Cart/CartCard';
 import { useMediaQuery } from 'react-responsive';
 import CartCardM from '../Components/Cart/CartCardM';
+import './home.css'
 
 
 const Cart = ({menu,showMenu,hideMenu}) => {
@@ -52,7 +53,7 @@ useEffect(()=>{
     if(token){
         setIsLoggedIn(true)
     }
-},[token])
+},[])
 
 const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 991px)' })
@@ -63,8 +64,20 @@ const isDesktop = useMediaQuery({ query: '(min-width: 992px)' })
 
     if (cart?.length ===0) {
         return(
-            <div className=' flex bg-[#28363a] h-screen mt-[-60px] py-[120px] px-[60px] ' >
-            Your Cart Is Empty!
+            <div className=' relative  flex justify-center items-center bg-[#75848E] w-[100%] h-screen mt-[-60px] py-[120px] px-[60px] ' >
+                {
+                    isDesktop &&  <div className=' bg-[#6b818f1b] p-[1rem]  text-[#d3dddd7c] text-5xl font-semibold text-center  rounded-lg box-shadow text-shadow ' >
+                    <p>  Your Cart Is Empty!</p>
+                  </div>
+                }
+                {
+                    isTablet &&  <div className=' bg-[#6b818f] p-[1rem]  text-[#d3dddd7c] text-5xl font-semibold text-center  rounded-lg box-shadow text-shadow ' >
+                    <p>  Your Cart Is Empty!</p>
+                  </div>
+                }
+               
+         
+          
 
             <div onMouseEnter={showMenu} onMouseLeave={hideMenu} className={menu} >
                 <div className=' cursor-pointer ' >
@@ -78,10 +91,19 @@ const isDesktop = useMediaQuery({ query: '(min-width: 992px)' })
         )
     }else{
         return (
-            <div className=' flex flex-col gap-[2rem] bg-[#28363a] h-screen mt-[-60px] justify-center items-center py-[120px] px-[60px] ' >
-              <div className=' flex justify-center items-center w-[100%] ' >
-                <h1 className=' text-[#d3dddd] text-2xl font-semibold ' >Your Cart</h1>
-              </div>
+            <div className=' relative  flex flex-col gap-[2rem] bg-[#75848E] h-screen mt-[-60px] justify-center items-center py-[120px] px-[10px] ' >
+                {
+                    isDesktop &&  <div className=' flex justify-center  text-center px-[0px]  items-center w-[100%] ' >
+                    <h1 className=' border-b-0 w-[20%] box-shadow rounded-lg text-[#d3dddd] text-2xl font-semibold text-shadow ' >Your Cart</h1>
+                  </div>
+                }
+                 {
+                    isTablet &&  <div className=' flex justify-center  text-center px-[0px]  items-center w-[100%] ' >
+                    <h1 className=' border-b-0 w-[20%] box-shadow rounded-lg text-[#d3dddd] text-2xl font-semibold text-shadow ' >Your Cart</h1>
+                  </div>
+                }
+              
+             
 
                     {
                         isDesktop &&  <div className=' flex flex-col gap-[1rem] text-[#d3dddd] ' >
@@ -94,17 +116,7 @@ const isDesktop = useMediaQuery({ query: '(min-width: 992px)' })
                         }
                       </div>
                     }
-                     {
-                        isMobile &&  <div className=' flex flex-col gap-[1rem] text-[#d3dddd] ' >
-                        {
-                            cart?.map((data)=>{
-                                return(
-                                    <CartCardM  data={data} />
-                                )
-                            })
-                        }
-                      </div>
-                    }
+                    
                      {
                         isTablet &&  <div className=' flex flex-col gap-[1rem] text-[#d3dddd] ' >
                         {
@@ -117,11 +129,20 @@ const isDesktop = useMediaQuery({ query: '(min-width: 992px)' })
                       </div>
                     }
              
-
-              <div className='text-[#d3DDDD] flex gap-2' >
-                <p>Total Price:</p>
-                <p className=' text-[#d3DDDD] ' > {totalAmount.toFixed(2)} </p>
-              </div>
+                    {
+                        isDesktop && <div className='text-[#d3DDDD] flex gap-0 w-[500px] justify-between ' >
+                        <p className=' text-shadow text-[20px] flex items-center justify-center text-center '>Total Price:</p>
+                        <p className='text-[#111111] flex items-center justify-center text-center text-sh-w font-semibold text-[24px] ' >$ {totalAmount.toFixed(2)} </p>
+                      </div>
+                    }
+                    {
+                        isTablet && <div className='text-[#d3DDDD] flex gap-0 w-[500px] justify-between ' >
+                        <p className=' text-shadow text-[20px] flex items-center justify-center text-center '>Total Price:</p>
+                        <p className='text-[#111111] flex items-center justify-center text-center text-sh-w font-semibold text-[24px] ' >$ {totalAmount.toFixed(2)} </p>
+                      </div>
+                    }
+                    
+              
 
               <div onMouseEnter={showMenu} onMouseLeave={hideMenu} className={menu} >
                 <div className=' cursor-pointer ' >

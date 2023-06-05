@@ -22,7 +22,7 @@ const NavBarM = () => {
     const cart = useSelector(state => state?.productsSlice?.Cart)
 
   return (
-    <div className=' overflow-y-hidden relative w-[100%] flex h-[50px] items-center px-[10px] bg-[#2e3c42] justify-between ' >
+    <div className=' overflow-x-hidden relative w-[100%] flex h-[50px] items-center px-[10px] bg-[#2e3c42] justify-between ' >
     <Link to={'/'} className=' flex items-center justify-center  font-[600] tracking-wider ' >
         <div className=' rounded-l-[10px] text-[#7A838F] bg-[#D3DDDD] text-[20px] pl-[10px] max-h-[50px] text-center  flex items-center   '>
         <p  >P</p>
