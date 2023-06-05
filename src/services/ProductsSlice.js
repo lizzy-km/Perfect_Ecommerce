@@ -22,8 +22,8 @@ const storedProducts = Cookies.get(STORAGE_KEY_Products) ? JSON.parse(Cookies.ge
 //____________________________________________________storedToken_____________________Null_____//
 const storedCart = Cookies.get(STORAGE_KEY_Cart) ? JSON.parse(Cookies.get(STORAGE_KEY_Cart)) : null;
 
-if (storedProducts && storedCart) { 
-  initialState.Products = storedProducts.Products
+if (storedCart) { 
+//   initialState.Products = storedProducts.Products
   initialState.Cart = storedCart.Cart
   initialState.quantity = storedCart.quantity
   initialState.totalamount= storedCart.totalamount

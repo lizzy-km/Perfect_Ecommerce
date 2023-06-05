@@ -20,19 +20,20 @@ const SlideCardM = ({data}) => {
             <div className=' flex justify-between  items-center ' >
                 <p className=' text-xs text-sh-w ' > price: <b> ${data?.price}</b> </p>
                 {
-                    isExisted &&
-                    <div onClick={()=>dispatch(removeCart(data))}  className=' box-shadow gap-1 text-shadow text-[#D3DDDD] buttonBlur cursor-pointer  p-[.3rem] rounded-[5px] flex mx-auto items-center text-xs ' >
-                    <p>Remove from cart</p>
-                    <IoIosRemove className=' text-xs ' />
-                </div>
-                }
-                {
                     !isExisted &&
                     <div onClick={()=>dispatch(addCart(data))} className=' box-shadow gap-1 text-shadow text-[#D3DDDD] buttonBlur cursor-pointer  p-[.3rem] rounded-[5px] flex mx-auto items-center text-xs ' >
                     <p>Add to cart</p>
                     <IoIosAdd className=' text-xs ' />
                 </div>
                 }
+                {
+                    isExisted &&
+                    <div onClick={()=>dispatch(removeCart(data))}  className=' box-shadow gap-1 text-shadow text-[#D3DDDD] buttonBlur cursor-pointer  p-[.3rem] rounded-[5px] flex mx-auto items-center text-[10px] ' >
+                    <p>Remove from cart</p>
+                    <IoIosRemove className=' text-xs ' />
+                </div>
+                }
+               
                
             </div>
            </div>

@@ -11,7 +11,6 @@ import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import LogIn from './Pages/Auth/LogIn';
 import SignUp from './Pages/Auth/SignUp';
-import { useLoginMutation } from './services/AuthApi';
 import Cart from './Pages/Cart';
 import CartM from './Pages/CartM';
 
@@ -81,7 +80,7 @@ function App() {
     }{
       isMobile &&     <>
        <Route exact path={'/'} element={<HomeM/>}  />
-      <Route exact path={'/cart'} element={<CartM hideMenu={hideMenu} showMenu={showMenu} menu={menu} />}  />
+      <Route exact path={'/cart'} element={<CartM  />}  />
       </>
        
 

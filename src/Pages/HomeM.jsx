@@ -4,7 +4,7 @@ import {Link, useNavigate} from 'react-router-dom'
 import { useLogoutMutation } from '../services/AuthApi'
 import { useDispatch } from 'react-redux'
 import { removeToken, removeUser } from '../services/AuthSlice'
-import { useProductsQuery, useSliderProductsQuery } from '../services/ProductsApi'
+import { useSliderProductsQuery } from '../services/ProductsApi'
 import SliderM from '../Components/Slider/SliderM'
 import CategoryM from '../Components/Category/CategoryM'
 import SliderLoaderM from '../Components/Slider/SliderLoaderM'
@@ -47,10 +47,7 @@ const HomeM = () => {
 
     const loading = data?.isLoading
 
-    useEffect(()=>{
-        // window.location.reload(true)
-
-    },[])
+   
 
     if (loading===false) {
         return (

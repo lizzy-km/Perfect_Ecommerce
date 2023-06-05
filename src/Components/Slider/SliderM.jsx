@@ -3,7 +3,6 @@ import { Carousel } from '@mantine/carousel';
 import { rem } from '@mantine/core';
 import './sliderM.css'
 import { useSliderProductsQuery } from '../../services/ProductsApi';
-import Autoplay from 'embla-carousel-autoplay';
 import SlideCardM from './SlideCardM';
 
 const SliderM = () => {
