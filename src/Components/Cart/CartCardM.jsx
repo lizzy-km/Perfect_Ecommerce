@@ -33,7 +33,7 @@ const CartCardM = ({data}) => {
           
             <div  className=' text-[10px] mb-[-15px] flex gap-1 ' >
         <p>Total:</p>
-            <p> ${oneItemPrice} </p>
+            <p> ${oneItemPrice.toFixed(2)} </p>
         </div>
         </div>
       </div>

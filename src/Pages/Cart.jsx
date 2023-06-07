@@ -91,7 +91,8 @@ const isDesktop = useMediaQuery({ query: '(min-width: 992px)' })
         )
     }else{
         return (
-            <div className=' relative  flex flex-col gap-[2rem] bg-[#75848E] h-screen mt-[-60px] justify-center items-center py-[120px] px-[10px] ' >
+            <div className=' relative  flex flex-col gap-[2rem] bg-[#75848E] h-auto mt-[0px]  py-[40px] px-[10px] ' >
+                <div className=' mt-[60px] bg-[#75848E] flex flex-col w-[100%] gap-4 justify-center items-center h-auto ' >
                 {
                     isDesktop &&  <div className=' flex justify-center  text-center px-[0px]  items-center w-[100%] ' >
                     <h1 className=' border-b-0 w-[20%] box-shadow rounded-lg text-[#d3dddd] text-2xl font-semibold text-shadow ' >Your Cart</h1>
@@ -132,13 +133,13 @@ const isDesktop = useMediaQuery({ query: '(min-width: 992px)' })
                     {
                         isDesktop && <div className='text-[#d3DDDD] flex gap-0 w-[500px] justify-between ' >
                         <p className=' text-shadow text-[20px] flex items-center justify-center text-center '>Total Price:</p>
-                        <p className='text-[#111111] flex items-center justify-center text-center text-sh-w font-semibold text-[24px] ' >$ {totalAmount.toFixed(2)} </p>
+                        <p className='text-[#111111] flex items-center justify-center text-center text-sh-w font-semibold text-[24px] ' >$ {totalAmount?.toFixed(2)} </p>
                       </div>
                     }
                     {
                         isTablet && <div className='text-[#d3DDDD] flex gap-0 w-[500px] justify-between ' >
                         <p className=' text-shadow text-[20px] flex items-center justify-center text-center '>Total Price:</p>
-                        <p className='text-[#111111] flex items-center justify-center text-center text-sh-w font-semibold text-[24px] ' >$ {totalAmount.toFixed(2)} </p>
+                        <p className='text-[#111111] flex items-center justify-center text-center text-sh-w font-semibold text-[24px] ' >$ {totalAmount?.toFixed(2)} </p>
                       </div>
                     }
                     
@@ -152,6 +153,8 @@ const isDesktop = useMediaQuery({ query: '(min-width: 992px)' })
                     <p>Logout</p>
                 </div>
             </div>
+                </div>
+               
             </div>
           )
     }

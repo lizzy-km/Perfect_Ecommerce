@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addCartQuantity, removeCart, subtractCartQuantity } from '../../services/ProductsSlice';
 
 const CartCard = ({data}) => {
-    // const quantity = useSelector(state=> state.productsSlice.quantity)
+    // const oneItemPrice = useSelector(state=> state.productsSlice.oneItemPrice)
     const dispatch= useDispatch()
-
-    // console.log(totalAmount);
+    
+    // console.log(oneItemPrice);
 
     const oneItemPrice = data?.quantity * data?.price
 
@@ -34,7 +34,7 @@ const CartCard = ({data}) => {
           
             <div className='  text-[10px] flex items-center  w-auto justify-start ' >
             <p className=' text-shadow text-[10px] flex items-center justify-center text-center '>Total: $</p>
-            <p className='text-[#111111] flex items-center justify-center text-center text-sh-w font-semibold text-[14px] ' > {oneItemPrice} </p>
+            <p className='text-[#111111] flex items-center justify-center text-center text-sh-w font-semibold text-[14px] ' > ${oneItemPrice.toFixed(2)} </p>
         </div>
         </div>
        

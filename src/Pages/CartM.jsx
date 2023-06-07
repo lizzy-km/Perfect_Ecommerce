@@ -78,8 +78,9 @@ const isDesktop = useMediaQuery({ query: '(min-width: 992px)' })
         )
     }else{
         return (
-            <div className=' relative  flex flex-col gap-[2rem] bg-[#75848E] h-screen mt-[-60px] justify-center items-center py-[120px] px-[10px] ' >
-                
+            <div className=' relative  flex flex-col gap-[2rem] bg-[#75848E] h-auto mt-[-0px]  py-[40px] px-[10px] ' >
+
+                <div className='flex flex-col gap-[2rem] bg-[#75848E] h-auto mt-[0px]  ' >
                 {
                     isMobile &&  <div className=' flex justify-start  text-center px-[0px]  items-center w-[100%] ' >
                     <h1 className=' border-b-2 w-[40%] box-shadow rounded-lg text-[#d3dddd] text-2xl font-semibold text-shadow ' >Your Cart</h1>
@@ -111,6 +112,8 @@ const isDesktop = useMediaQuery({ query: '(min-width: 992px)' })
                     }
               
 
+             
+                </div>
              
             </div>
           )
